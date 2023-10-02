@@ -18,11 +18,10 @@ export class RoomService {
   createRoom(roomName: string): Promise<Room> {
     const opts = {
       name: roomName,
-      emptyTimeout: 30 * 60, // 10 minutes
+      emptyTimeout: 60 * 60, // 60 minutes
       maxParticipants: 20,
     };
     console.log('oomad');
-    
     return this.roomServiceClient.createRoom(opts);
   }
 
